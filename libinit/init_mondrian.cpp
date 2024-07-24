@@ -67,12 +67,12 @@ static const char *device_prop_key[] =
           "marketname", "manufacturer", "mod_device", nullptr };
 
 static const char *device_prop_val[] =
-        { "POCO", "mondrian", "23013PC75G", "23013PC75G", "mondrian_global",
-          "POCO F5 Pro", "Xiaomi", "mondrian_global", nullptr };
+        { "POCO", "mondrian", "23013PC75G", "23013PC75G", "mondrian_eea",
+          "POCO F5 Pro", "Xiaomi", "mondrian_eea_global", nullptr };
 
 void vendor_load_properties() {
-    const char *fingerprint = "POCO/mondrian_global/mondrian:14/UKQ1.230804.001/V816.0.5.0.UMNMIXM:user/release-keys";
-    const char *description = "mondrian_global-user 14 UKQ1.230804.001 V816.0.5.0.UMNMIXM release-keys";
+    const char *fingerprint = "POCO/mondrian_eea/mondrian:14/UKQ1.230804.001/V816.0.5.0.UMNEUXM:user/release-keys";
+    const char *description = "mondrian_eea-user 14 UKQ1.230804.001 V816.0.5.0.UMNEUXM release-keys";
 
     full_property_override("build.fingerprint", fingerprint, false);
     full_property_override("build.description", description, false);
@@ -81,7 +81,7 @@ void vendor_load_properties() {
         full_property_override(device_prop_key[i], device_prop_val[i], false);
         full_property_override(device_prop_key[i], device_prop_val[i], true);
     }
-    full_property_override("build.product", "mondrian_global", false);
+    full_property_override("build.product", "mondrian_eea", false);
 
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
