@@ -41,3 +41,4 @@ TARGET_SCREEN_DENSITY := 560
 # Vibrator
 TARGET_QTI_VIBRATOR_EFFECT_LIB := libqtivibratoreffect.xiaomi
 TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM := true
+$(call soong_config_set, XIAOMI_VIBRATOR, USE_EFFECT_STREAM, true)
