@@ -47,3 +47,5 @@ export VENDOR=xiaomi
 export VENDOR_COMMON=${VENDOR}
 
 "./../../${VENDOR_COMMON}/${DEVICE_COMMON}/extract-files.sh" "$@"
+
+"./../../../vendor/${VENDOR_COMMON}/firmware/${DEVICE}/extract-files-extra.sh"
